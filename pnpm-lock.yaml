@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@skillpilot/typescript-config':
+        specifier: workspace:*
+        version: link:packages/typescript-config
       prettier:
         specifier: ^3.7.4
         version: 3.7.4
@@ -36,7 +39,7 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@repo/typescript-config':
+      '@skillpilot/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@types/node':
@@ -103,7 +106,7 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@repo/typescript-config':
+      '@skillpilot/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@types/node':
@@ -137,6 +140,9 @@ importers:
         specifier: workspace:*
         version: link:../types
     devDependencies:
+      '@skillpilot/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       typescript:
         specifier: ^5.9.2
         version: 5.9.2
@@ -153,6 +159,9 @@ importers:
         specifier: ^8.12.0
         version: 8.18.0
     devDependencies:
+      '@skillpilot/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       prisma:
         specifier: ^6.4.1
         version: 6.19.2(typescript@5.9.2)
@@ -219,7 +228,7 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@repo/typescript-config':
+      '@skillpilot/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
       '@types/node':

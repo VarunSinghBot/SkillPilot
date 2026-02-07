@@ -30,16 +30,16 @@ export function Navbar() {
         <motion.nav
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className="sticky top-0 z-50 w-full border-b border-white/10 bg-surface-50/80 dark:bg-surface-950/80 backdrop-blur-xl"
+            className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-surface-950/80 backdrop-blur-xl shadow-sm"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 group">
-                        <div className="p-2 rounded-xl gradient-primary shadow-lg shadow-primary-500/20 group-hover:shadow-primary-500/40 transition-shadow">
+                        <div className="p-2 rounded-xl bg-gray-900 dark:bg-gray-800 shadow-md group-hover:shadow-lg transition-shadow">
                             <Compass className="w-5 h-5 text-white" />
                         </div>
-                        <span className="font-display font-bold text-xl text-gradient">
+                        <span className="font-display font-bold text-xl text-gray-900 dark:text-white">
                             SkillPilot
                         </span>
                     </Link>
@@ -65,19 +65,19 @@ export function Navbar() {
                         {mounted && (
                             <button
                                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                                className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                                className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                             >
                                 {theme === "dark" ? (
                                     <Sun className="w-5 h-5 text-yellow-500" />
                                 ) : (
-                                    <Moon className="w-5 h-5 text-slate-600" />
+                                    <Moon className="w-5 h-5 text-gray-600" />
                                 )}
                             </button>
                         )}
 
                         {/* Auth Button */}
                         {status === "loading" ? (
-                            <div className="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 animate-pulse" />
+                            <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse" />
                         ) : session ? (
                             <div className="flex items-center gap-3">
                                 <div className="hidden sm:flex items-center gap-2">
@@ -88,11 +88,11 @@ export function Navbar() {
                                             className="w-8 h-8 rounded-full ring-2 ring-primary-500/50"
                                         />
                                     ) : (
-                                        <div className="w-8 h-8 rounded-full gradient-primary flex items-center justify-center">
+                                        <div className="w-8 h-8 rounded-full bg-gray-900 dark:bg-gray-700 flex items-center justify-center">
                                             <User className="w-4 h-4 text-white" />
                                         </div>
                                     )}
-                                    <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                                         {session.user?.name?.split(" ")[0]}
                                     </span>
                                 </div>
@@ -132,7 +132,7 @@ function NavLink({
     return (
         <Link
             href={href}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-colors"
         >
             {icon}
             {children}

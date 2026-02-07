@@ -24,12 +24,12 @@ export default async function HomePage() {
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6 text-gray-900 dark:text-white">
               Navigate Your Career Like{" "}
-              <span className="text-gradient">Git for Your Future</span>
+              <span className="bg-gradient-to-r from-primary-500 to-pink-500 bg-clip-text text-transparent">Git for Your Future</span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
               Create parallel career paths, track skills across timelines, and let AI guide you
               through decisions. Branch, experiment, and merge your way to success.
             </p>
@@ -55,13 +55,13 @@ export default async function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white/50 dark:bg-slate-900/50">
+      <section className="py-20 bg-gray-50/50 dark:bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4 text-gray-900 dark:text-white">
               Why SkillPilot?
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Traditional career planning is linear. Reality isn't. We give you the tools to explore
               multiple futures simultaneously.
             </p>
@@ -90,12 +90,12 @@ export default async function HomePage() {
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="glass-card p-8 sm:p-12 text-center animated-border">
+          <div className="glass-card p-8 sm:p-12 text-center">
             <div className="p-8 sm:p-12">
-              <h2 className="text-2xl sm:text-3xl font-display font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl font-display font-bold mb-4 text-gray-900 dark:text-white">
                 Ready to pilot your career?
               </h2>
-              <p className="text-slate-600 dark:text-slate-400 mb-8">
+              <p className="text-gray-600 dark:text-gray-400 mb-8">
                 Join thousands of students and professionals mapping their futures with confidence.
               </p>
               {!session && (
@@ -123,11 +123,11 @@ function FeatureCard({
 }) {
   return (
     <div className="glass-card-hover p-6 group">
-      <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-primary-500/20">
+      <div className="w-12 h-12 rounded-xl bg-gray-900 dark:bg-gray-800 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
         <span className="text-white">{icon}</span>
       </div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-slate-600 dark:text-slate-400">{description}</p>
+      <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-400">{description}</p>
     </div>
   );
 }
