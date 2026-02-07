@@ -1,0 +1,13 @@
+{
+    "name": "@skillpilot/ai-engine",
+    "version": "0.0.1",
+    "private": true,
+    "main": "./src/index.ts",
+    "types": "./src/index.ts",
+    "dependencies": {
+        "@skillpilot/types": "workspace:*"
+    },
+    "devDependencies": {
+        "typescript": "^5.9.2"
+    }
+}
